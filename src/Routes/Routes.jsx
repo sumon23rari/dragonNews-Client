@@ -13,21 +13,22 @@ export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+    
         children: [
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch(`http://localhost:5000/news`)
+                loader: () => fetch(`    https://dragon-new-server-one.vercel.app/news`)
             },
             {
                 path: '/catagory/:id',
                 element: <Catagory></Catagory>,
-                loader: ({ params }) => fetch(`http://localhost:5000/catagory/${params.id}`)
+                loader: ({ params }) => fetch(`    https://dragon-new-server-one.vercel.app/catagory/${params.id}`)
             },
             {
                 path: '/news/:id',
                 element: <PrivateRoute><News></News> </PrivateRoute>,
-                loader: ({ params }) => fetch(`http://localhost:5000/news/${params.id}`)
+                loader: ({ params }) => fetch(`    https://dragon-new-server-one.vercel.app/news/${params.id}`)
             },
             {
                 path: "/register",

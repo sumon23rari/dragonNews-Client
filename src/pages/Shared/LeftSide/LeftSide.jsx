@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const LeftSide = () => {
     const [catagorys,setCatagorys]=useState([]);
     useEffect(()=>{
-        fetch(`http://localhost:5000/catagorinews`)
+        fetch(`    https://dragon-new-server-one.vercel.app/catagorinews`)
         .then(res=>res.json())
         .then(data=>setCatagorys(data))
     },[])
